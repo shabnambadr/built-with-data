@@ -62,6 +62,7 @@ Log entries are modelled on actual output from `WPEFramework`, `controlMgr`,
 - 25+ dirty device model name variants (e.g. `APACHE_4K`, `apache 4k`, `Apache4K`)
 - CPU temperature sensor failures logged as `-1` or `999`
 - Blank boot times where device crashed before completing boot
+- NULL, ERR_UNKNOWN, N/A in error code fields
 - 20 duplicate Ticket IDs from a simulated export bug
 - Logic errors: open tickets with resolution days filled, closed tickets with none
 
@@ -78,6 +79,7 @@ Every transformation is a discrete, auditable step in the Applied Steps panel.
 | Mixed timestamp formats | Parsed to unified Date/Time, unparseable rows surfaced as null |
 | Bad CPU temp (-1, 999) | Replaced with null — not zero, to protect averages |
 | Blank boot times | Kept as null — crash before boot is different from a fast boot |
+| Bad error codes | Standardised to Unclassified |
 | Duplicate ticket IDs | Identified and removed (20 rows) |
 | Whitespace / encoding | Trim + Clean applied to all text columns |
 
