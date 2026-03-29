@@ -81,7 +81,7 @@ Every transformation is a discrete, auditable step in the Applied Steps panel.
 | Duplicate ticket IDs | Identified and removed (20 rows) |
 | Whitespace / encoding | Trim + Clean applied to all text columns |
 
-Output loaded as named Excel Table (`stb_fleet_health_clean`) to sheet `stb_fleet_health_clean`.
+Output loaded as named Excel Table (`stb_fleet_health_clean`) to sheet `Raw_Data`.
 
 ---
 
